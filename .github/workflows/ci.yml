@@ -1,18 +1,20 @@
 # Copyright 2026 Mosoro Inc.
 # SPDX-License-Identifier: Apache-2.0
 
-name: Deploy Docs
+name: CI
 
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  deploy:
-    name: Deploy to GitHub Pages
+  build:
+    name: Build Docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,5 +27,5 @@ jobs:
       - name: Install mkdocs
         run: pip install mkdocs mkdocs-material
 
-      - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+      - name: Build docs
+        run: mkdocs build --strict

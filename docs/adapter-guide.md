@@ -52,5 +52,5 @@ pytest tests/test_adapter_contract.py
 
 ## Step 4: Submit
 
-- **Community adapters**: Submit a PR to [mosoro-adapters-community](https://github.com/mosoro/mosoro-adapters-community)
-- **Core adapters**: Submit a PR to [mosoro-core](https://github.com/mosoro/mosoro-core)
+- **Community adapters**: Submit a PR to [mosoro-adapters-community](https://github.com/mosoroio/mosoro-adapters-community)
+- **Core adapters**: Submit a PR to [mosoro-core](https://github.com/mosoroio/mosoro-core)

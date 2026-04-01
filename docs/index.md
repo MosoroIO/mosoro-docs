@@ -1,8 +1,6 @@
 # Mosoro
 
-**The neutral bridge for multi-vendor warehouse robot fleets.**
-
-Mosoro is an open-source semantic interoperability gateway that enables mixed-vendor robot fleets to communicate through a unified MQTT-based protocol. It provides deterministic protocol translation, real-time routing, and a unified API and dashboard — without the complexity of a full HFMS platform.
+Mosoro is an open-source semantic interoperability gateway that normalizes messages from different robot vendors into a common schema — enabling mixed-vendor robot fleets to communicate through a unified MQTT-based protocol. It provides deterministic protocol translation, real-time routing, and a unified API and dashboard.
 
 ## Key Features
 

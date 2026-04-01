@@ -1,6 +1,7 @@
 # Architecture
 
-Mosoro is a lightweight, open-core middleware platform that bridges multi-vendor warehouse robot fleets through a unified MQTT-based protocol. This document describes the high-level architecture, component responsibilities, and data flow.
+Mosoro is a lightweight, open-core semantic interoperability gateway for multi-vendor robot fleets. It provides deterministic protocol translation through a unified MQTT-based protocol. This document describes the high-level architecture, component responsibilities, and data flow.
+This document describes the high-level architecture, component responsibilities, and data flow.
 
 ## High-Level Architecture
 

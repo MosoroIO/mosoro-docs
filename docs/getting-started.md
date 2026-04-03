@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.9+ (3.11+ recommended for production deployments)
 - Docker and Docker Compose v2
 - An MQTT broker (Mosquitto included)
 

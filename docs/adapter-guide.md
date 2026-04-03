@@ -2,6 +2,44 @@
 
 This guide walks you through creating a new robot adapter for Mosoro.
 
+## Requirements
+
+- Python 3.9+
+- `mosoro-core>=1.0.0`
+
+## Community Adapters
+
+Pre-built adapters are available in [mosoro-adapters-community](https://github.com/mosoroio/mosoro-adapters-community):
+
+| Vendor | Package | Install |
+|--------|---------|---------|
+| Locus Robotics | `mosoro-adapter-locus` | `pip install mosoro-adapter-locus` |
+| MiR | `mosoro-adapter-mir` | `pip install mosoro-adapter-mir` |
+| Fetch Robotics | `mosoro-adapter-fetch` | `pip install mosoro-adapter-fetch` |
+| Geek+ | `mosoro-adapter-geekplus` | `pip install mosoro-adapter-geekplus` |
+| Stretch | `mosoro-adapter-stretch` | `pip install mosoro-adapter-stretch` |
+
+### Locus Robotics
+
+The Locus adapter connects to the Locus REST API and normalizes robot state into the Mosoro standard schema.
+
+```bash
+pip install mosoro-adapter-locus
+```
+
+Configure via YAML:
+
+```yaml
+adapter:
+  type: locus
+  robot_id: locus-001
+connection:
+  api_base_url: http://locus-api-host:8080
+  api_key: your-api-key
+```
+
+Supported commands: `move_to`, `pause`, `resume`.
+
 ## Overview
 
 An adapter translates between a robot vendor's native API and the Mosoro standard message format (MosoroMessage).

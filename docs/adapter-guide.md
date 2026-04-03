@@ -24,19 +24,33 @@ Pre-built adapters are available in [mosoro-adapters-community](https://github.c
 The Locus adapter connects to the Locus REST API and normalizes robot state into the Mosoro standard schema.
 
 ```bash
-pip install mosoro-adapter-locus
+pip install mosoro-adapters-community
 ```
 
-Configure via YAML:
+**Configuration — environment variables (recommended):**
+
+| Variable | Description | Default |
+|---|---|---|
+| `LOCUS_HOST` | Hostname or IP of the Locus API server | `localhost` |
+| `LOCUS_PORT` | Port of the Locus API server | `8080` |
+| `LOCUS_API_KEY` | API key for authentication | _(none)_ |
+
+```bash
+export LOCUS_HOST=192.168.1.50
+export LOCUS_PORT=8080
+export LOCUS_API_KEY=your-api-key
+```
+
+**Configuration — YAML (overrides env vars):**
 
 ```yaml
-adapter:
-  type: locus
-  robot_id: locus-001
-connection:
-  api_base_url: http://locus-api-host:8080
-  api_key: your-api-key
+robot_id: locus-001
+vendor: locus
+api_base_url: http://192.168.1.50:8080/api
+api_key: your-api-key
 ```
+
+> **Note:** `api_base_url` in the YAML takes precedence over `LOCUS_HOST`/`LOCUS_PORT` env vars. If omitted, env vars are used. If neither is set, defaults to `http://localhost:8080/api`.
 
 Supported commands: `move_to`, `pause`, `resume`.
 
